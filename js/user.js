@@ -19,7 +19,7 @@ function updateUserview()
     $("#user-view > a:nth-child(4)").html(STRING.BLANK);
   }
 }
- 
+
 function login()
 {
   userstate.logged_in = true;
