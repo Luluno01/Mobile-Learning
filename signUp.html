@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Import Google Icon Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/font-fix.css">
+    <link rel="stylesheet" href="css/hideScrollbar.css">
+    <link rel="stylesheet" href="css/mainframe.css">
+    <link rel="stylesheet" href="css/unselectable.css">
+
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+    <script src="lang/zh-CN/string.js"></script>
+    <script src="lang/lang.js"></script>
+
+    <title>TITLE_SIGN_UP</title>
+  </head>
+  <body class="viewport valign-wrapper unselectable">
+    <!-- <div class="row navholder"></div> -->
+
+    <div class="container">
+      <div class="row expand-horizontal center-align">
+        <i class="fa fa-html5" style="font-size: 10em;"></i>
+      </div>
+      <div class="row expand-horizontal center-align input-field">
+          <input id="user_name" type="text" class="">
+          <label for="user_name" class="LABEL_USER_NAME"></label>
+      </div>
+      <div class="row expand-horizontal center-align input-field">
+        <input id="password" type="password" class="">
+        <label for="password" class="LABEL_PASSWORD">password</label>
+      </div>
+      <div class="row expand-horizontal center-align input-field">
+        <input id="password-confirm" type="password" class="">
+        <label for="password-confirm" class="LABEL_PASSWORD_CONFIRM">password</label>
+      </div>
+      <div class="row expand-horizontal input-field">
+        <a class="waves-effect waves-light btn SIGN_UP expand-horizontal"></a>
+      </div>
+      <div class="row expand-horizontal">
+        <a href="#" onclick="toLogin();" class="BACK_TO_LOGIN expand-horizontal"></a>
+      </div>
+    </div>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/signUp.js"></script>
+    <script src="js/framecallback.js"></script>
+  </body>
+</html>

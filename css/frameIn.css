@@ -1,0 +1,39 @@
+body
+{
+  overflow: hidden;
+}
+
+.frameIn
+{
+  z-index: 997;
+  position: relative;
+  top: 0px;
+  animation: frameIn 0.35s;
+  -moz-animation: frameIn 0.35s;
+  -webkit-animation: frameIn 0.35s;
+  -o-animation: frameIn 0.35s;
+}
+
+@keyframes frameIn
+{
+  from {left:100vw;}
+  to {left:0px;}
+}
+
+@-moz-keyframes frameIn
+{
+  from {left:100vw;}
+  to {left:0px;}
+}
+
+@-webkit-keyframes frameIn
+{
+  from {left:100vw;}
+  to {left:0px;}
+}
+
+@-o-keyframes frameIn
+{
+  from {left:100vw;}
+  to {left:0px;}
+}

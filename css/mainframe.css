@@ -1,0 +1,99 @@
+.viewport
+{
+  height: 100vh;
+}
+
+.expand-horizontal
+{
+  width: 100%;
+}
+
+.container .row
+{
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.drag-target
+{
+  height: 100%;
+  width: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 998;
+}
+
+.navholder
+{
+  height: 56px;
+  width: 100%;
+  margin: 0px;
+}
+
+.subpage
+{
+  height: calc(100vh - 56px);
+}
+
+iframe
+{
+  position: absolute;
+  z-index: inherit;
+  top: 56px;
+  border: none;
+  height: calc(100vh - 56px);
+  width: 100vw;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1201px)
+{
+  .navholder
+  {
+    height: 56px;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .subpage
+  {
+    height: calc(100vh - 56px);
+  }
+
+  iframe
+  {
+    position: absolute;
+    z-index: inherit;
+    top: 56px;
+    border: none;
+    height: calc(100vh - 64px);
+    width: 100vw;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 601px)
+{
+  .navholder
+  {
+    height: 64px;
+    width: 100%;
+    margin: 0px;
+  }
+
+  .subpage
+  {
+    height: calc(100vh - 64px);
+  }
+
+  iframe
+  {
+    position: absolute;
+    z-index: inherit;
+    top: 64px;
+    border: none;
+    height: calc(100vh - 64px);
+    width: 100vw;
+    overflow: hidden;
+  }
+}
