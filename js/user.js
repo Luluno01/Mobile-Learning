@@ -24,7 +24,7 @@ function login()
 {
   userstate.logged_in = true;
   userstate.username = "Admin";
-  userstate.usermail = "admin@xmu.edu.cn";
+  userstate.useremail = "admin@xmu.edu.cn";
   updateUserview();
   showFrame("mainfn-frame");
 }
