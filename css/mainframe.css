@@ -8,6 +8,12 @@
   width: 100%;
 }
 
+.pos-bottom
+{
+  position: absolute;
+  bottom: 15px;
+}
+
 .container .row
 {
   margin-left: 0px;
@@ -141,7 +147,7 @@ label
   {
     background: #FFFFFF;
     position: absolute;
-    top: 56px;
+    top: 64px;
     z-index: 997;
     display: none;
   }

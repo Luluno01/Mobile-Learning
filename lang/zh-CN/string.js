@@ -17,6 +17,8 @@ var STRING1 =
 
 var BUTTON =
 {
+  NEXT_QUESTION: "下一题",
+  PREV_QUESTION: "上一题"
 };
 
 var FUNCTION =
@@ -40,6 +42,6 @@ var TITLE =
 {
   TITLE_LOGIN: "登录",
   TITLE_SIGN_UP: "注册",
-  TITLE_COLLEGE: "大学",
+  TITLE_COLLEGE: "大学练习题库",
   TITLE_MAIN: "阶段选择"
 }

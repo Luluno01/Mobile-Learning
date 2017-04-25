@@ -141,7 +141,7 @@ function changeMainFnFrame(target_src, desc)
 {
   if($("#mainfn-frame").prop("src") == target_src) return false;
   toggleLoad(desc || STRING.STRING1.DEFAULT);
-  $("#mainfn-frame").prop("src", target_src);
+  setTimeout('$("#mainfn-frame").prop("src", "' + target_src + '");', 500);
   standby--;
 }
 
