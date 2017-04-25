@@ -26,17 +26,18 @@ window.onload = function()
   updateUserview();
 };
 
-// function toggleLoad(speed)
-// {
-//   if($("#spin").is(":hidden"))
-//   {
-//     $("#spin").fadeIn(speed || 500);
-//   }
-//   else
-//   {
-//     $("#spin").fadeOut(speed || 500);
-//   }
-// }
+function toggleLoad(desc, speed)
+{
+  if($("#preloader").is(":hidden"))
+  {
+    $("#preloader > p").html(STRING.STRING1.LOADING_TIP_DEFAULT || desc);
+    $("#preloader").fadeIn(speed || 500);
+  }
+  else
+  {
+    $("#preloader").fadeOut(speed || 500);
+  }
+}
 
 function toggleAnim(selector, anim, callback) { //Not my code
     $(selector).removeClass(anim).addClass(anim).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
@@ -134,6 +135,14 @@ function setTitle(title)
   var _title = (current_frame != -1) ? (title || TITLE[window.frames[current_frame].document.title]) : "Rua";
   document.title = _title;
   $("#title-bar").html(_title);
+}
+
+function changeMainFnFrame(target_src, desc)
+{
+  if($("#mainfn-frame").prop("src") == target_src) return false;
+  toggleLoad(desc || STRING.STRING1.DEFAULT);
+  $("#mainfn-frame").prop("src", target_src);
+  standby--;
 }
 
 // window.onload = function()

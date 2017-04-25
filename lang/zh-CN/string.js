@@ -9,6 +9,8 @@ var STRING1 =
   SELECT_LEVEL: "选择您的学习阶段",
   LEVEL_HIGHSCHOOL: "<i class='material-icons left'>cloud</i>高中",
   LEVEL_COLLEGE: "<i class='material-icons left'>cloud</i>大学",
+  LOADING_TIP_DEFAULT: "载入中",
+  LOADING_TIP_GET_QUESTION: "正在加载题库",
   BLANK: " ",
   DEFAULT: "rua"
 };
@@ -39,5 +41,5 @@ var TITLE =
   TITLE_LOGIN: "登录",
   TITLE_SIGN_UP: "注册",
   TITLE_COLLEGE: "大学",
-  TITLE_MAIN: ""
+  TITLE_MAIN: "阶段选择"
 }
