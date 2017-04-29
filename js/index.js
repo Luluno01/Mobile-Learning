@@ -15,7 +15,14 @@ $(document).ready(function()
   // Ml.toast = (window.NativeInterface && NativeInterface.toast) || Materialize.toast;
   if(window.NativeInterface && NativeInterface.toast)
   {
-    Ml.toast = NativeInterface.toast;
+    Ml.toast = function(content)
+    {
+      NativeInterface.toast(content);
+    };
+    Ml.toastLong = function(content)
+    {
+      NativeInterface.toastLong(content);
+    };
   }
   else
   {
