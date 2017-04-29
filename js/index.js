@@ -58,10 +58,6 @@ window.onload = function()
   console.log("Total frames: " + fcnt);
   showFrame(0);
   updateUserview();
-  if(window.NativeInterface)
-  {
-    NativeInterface.onAppLoaded();
-  }
 };
 
 function toggleLoad(desc, speed)
