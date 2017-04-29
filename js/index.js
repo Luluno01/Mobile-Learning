@@ -1,3 +1,6 @@
+// using namespace Ml;
+var Ml = {};
+
 var fcnt;
 var indexFrameLoaded = false;
 
@@ -9,13 +12,26 @@ $(document).ready(function()
   //$('.collapsible').collapsible();
 
   fcnt = $("#frames").children().length;
+  // Ml.toast = (window.NativeInterface && NativeInterface.toast) || Materialize.toast;
+  if(window.NativeInterface && NativeInterface.toast)
+  {
+    Ml.toast = NativeInterface.toast;
+  }
+  else
+  {
+    Ml.toast = function(content)
+    {
+      Materialize.toast(content, 2000);
+    };
+    Ml.toastLong = function(content)
+    {
+      Materialize.toast(content, 3500);
+    };
+  }
 });
 
 document.title = TITLE.TITLE_LOGIN;
 $("#title-bar").html(TITLE.TITLE_LOGIN);
-
-// using namespace Ml;
-var Ml = {};
 
 var standby = 0;
 
@@ -111,6 +127,7 @@ function showFrame(frm)
   if(typeof frm == "undefined" || frm == null) return -1;
   if(typeof frm == "number" && frm < fcnt)
   {
+    console.log("Attmpt to show frame with index: " + frm);
     if(frm == current_frame) return current_frame;
     $($("#frames").children()[frm]).fadeIn(20);
     toggleAnim($("#frames").children()[frm], "frameIn", function(){$($("#frames").children()[current_frame]).fadeOut(300);});
@@ -181,10 +198,20 @@ function setTitle(title)
 
 function changeMainFnFrame(target_src, desc)
 {
-  if($("#mainfn-frame").prop("src") == target_src) return false;
+  if($("#mainfn-frame").attr("src") == target_src) return false;
   toggleLoad(desc || STRING.STRING1.DEFAULT);
-  setTimeout('$("#mainfn-frame").prop("src", "' + target_src + '");', 500);
+  setTimeout('$("#mainfn-frame").attr("src", "' + target_src + '");', 500);
   standby--;
+  console.log("Main Function Frame has been navigated to " + target_src);
+  return true;
+}
+
+function _changeMainFnFrame(target_src)
+{
+  if($("#mainfn-frame").attr("src") == target_src) return false;
+  $("#mainfn-frame").attr("src", target_src);
+  console.log("Main Function Frame has been navigated to " + target_src);
+  return true;
 }
 
 // window.onload = function()

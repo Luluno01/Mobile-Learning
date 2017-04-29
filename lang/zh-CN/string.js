@@ -15,6 +15,11 @@ var STRING1 =
   DEFAULT: "rua"
 };
 
+var TIPS =
+{
+  TIPS_LOGIN_FIRST: "请先登录"
+};
+
 var BUTTON =
 {
   NEXT_QUESTION: "下一题",
@@ -34,6 +39,7 @@ var FUNCTION =
 var STRING =
 {
   STRING1: STRING1,
+  TIPS: TIPS,
   BUTTON: BUTTON,
   FUNCTION: FUNCTION
 };
