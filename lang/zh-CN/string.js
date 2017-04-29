@@ -12,6 +12,8 @@ var STRING1 =
   LEVEL_COLLEGE: "<i class='material-icons left'>cloud</i>大学",
   LOADING_TIP_DEFAULT: "载入中",
   LOADING_TIP_GET_QUESTION: "正在加载题库",
+  EXIT_CONFIRM_TITLE: "退出应用",
+  EXIT_CONFIRM_CONTENT: "真真要退出吗",
   BLANK: " ",
   DEFAULT: "rua"
 };
@@ -24,7 +26,9 @@ var TIPS =
 var BUTTON =
 {
   NEXT_QUESTION: "下一题",
-  PREV_QUESTION: "上一题"
+  PREV_QUESTION: "上一题",
+  CONFIRM: "确定",
+  CANCEL: "算了"
 };
 
 var FUNCTION =

@@ -28,3 +28,16 @@ function login()
   updateUserview();
   showFrame("mainfn-frame");
 }
+
+function onUserViewClick()
+{
+  if(userstate.logged_in)
+  {
+    // TODO: add user center
+    return;
+  }
+  else
+  {
+    Ml.frame["login-frame"].show();
+  }
+}

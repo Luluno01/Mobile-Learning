@@ -25,9 +25,14 @@ $(document).ready(function()
     {
       NativeInterface.toastLong(content);
     };
+    Ml.exit = function()
+    {
+      NativeInterface.exit();
+    }
   }
   else
   {
+    $(".EXIT").remove(); // Remove useless button when in normal browser
     Ml.toast = function(content)
     {
       Materialize.toast(content, 2000);
@@ -37,6 +42,9 @@ $(document).ready(function()
       Materialize.toast(content, 3500);
     };
   }
+
+  // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+  $('.modal').modal();
 });
 
 document.title = TITLE.TITLE_LOGIN;

@@ -34,7 +34,7 @@
     </div>
 
     <ul id="slide-out" class="side-nav">
-      <li><div id="user-view" class="userView">
+      <li><div id="user-view" class="userView" onclick="onUserViewClick();">
         <div class="background">
           <img src="img/background.jpg" style="max-width: 100%;">
         </div>
@@ -45,7 +45,7 @@
       <li><a href="#" class="waves-effect HOMEPAGE" onclick="Ml.frame['mainfn-frame'].showDefault();"></a></li>
       <li><div class="divider"></div></li>
       <li><a href="#" class="waves-effect ABOUT"></a></li>
-      <li><a href="#" class="waves-effect EXIT"></a></li>
+      <li><a href="#exit-confirm-modal" class="waves-effect EXIT"></a></li>
     </ul>
 
     <!-- navigation bar -->
@@ -57,6 +57,19 @@
         </ul>
       </div>
     </nav>
+
+    <!-- Modal Structure -->
+    <div id="exit-confirm-modal" class="modal">
+      <div class="modal-content">
+        <h4 class="EXIT_CONFIRM_TITLE">Modal Header</h4>
+        <p class="EXIT_CONFIRM_CONTENT">A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat CONFIRM" onclick="Ml.exit();"></a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat CANCEL"></a>
+      </div>
+    </div>
+
     <div id="frames" class="subpage">
       <iframe id="login-frame" src="login.html" width="" height=""></iframe>
       <iframe id="sign-up-frame" src="signUp.html" width="" height=""></iframe>
