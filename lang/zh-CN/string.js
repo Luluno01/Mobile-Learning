@@ -1,5 +1,6 @@
 var STRING1 =
 {
+  SPLASH: "移动学习测试",
   USER_NAME_GUEST: "请登录",
   HOMEPAGE: "<i class='fa fa-home'></i>主界面",
   ABOUT: "<i class='fa fa-question-circle-o'></i>关于",

@@ -58,6 +58,7 @@ window.onload = function()
   console.log("Total frames: " + fcnt);
   showFrame(0);
   updateUserview();
+  $("#splash").fadeOut(500);
 };
 
 function toggleLoad(desc, speed)
