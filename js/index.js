@@ -15,6 +15,7 @@ $(document).ready(function()
   // Ml.toast = (window.NativeInterface && NativeInterface.toast) || Materialize.toast;
   if(window.NativeInterface && NativeInterface.toast)
   {
+    $("#splash").hide(); // Use Android app splash
     // Java bridge method can't be invoked on a non-injected object
     Ml.toast = function(content)
     {
