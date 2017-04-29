@@ -1,0 +1,23 @@
+.about-header
+{
+  background-color: #ee6e73;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.about-header h1, h4
+{
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.about-header h4
+{
+  color: #FFCDD2;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  color: #ee6e73;
+  font-weight: 300;
+}

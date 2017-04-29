@@ -14,6 +14,12 @@ var STRING1 =
   LOADING_TIP_GET_QUESTION: "正在加载题库",
   EXIT_CONFIRM_TITLE: "退出应用",
   EXIT_CONFIRM_CONTENT: "真真要退出吗",
+  ABOUT_TITLE: "关于",
+  ABOUT_DESC: "了解此应用和我们的团队",
+  CREDIT_TITLE: "团队成员",
+  APP_INFO_TITLE: "应用信息",
+  APP_INFO_CONTENT: "移动学习测试项目",
+  CREDIT_CONTENT: "成员：Unknown",
   BLANK: " ",
   DEFAULT: "rua"
 };
@@ -54,5 +60,6 @@ var TITLE =
   TITLE_LOGIN: "登录",
   TITLE_SIGN_UP: "注册",
   TITLE_COLLEGE: "大学练习题库",
-  TITLE_MAIN: "阶段选择"
+  TITLE_MAIN: "阶段选择",
+  TITLE_ABOUT: "关于"
 }

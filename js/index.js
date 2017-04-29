@@ -13,7 +13,7 @@ $(document).ready(function()
 
   fcnt = $("#frames").children().length;
   // Ml.toast = (window.NativeInterface && NativeInterface.toast) || Materialize.toast;
-  if(window.NativeInterface && NativeInterface.toast)
+  if(window.NativeInterface)
   {
     $("#splash").hide(); // Use Android app splash
     // Java bridge method can't be invoked on a non-injected object
