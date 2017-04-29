@@ -26,52 +26,14 @@
     <!-- <div class="row navholder"></div> -->
 
     <div class="container">
-      <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-blue">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div><div class="gap-patch">
-            <div class="circle"></div>
-          </div><div class="circle-clipper right">
-            <div class="circle"></div>
-          </div>
-        </div>
-
-        <div class="spinner-layer spinner-red">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div><div class="gap-patch">
-            <div class="circle"></div>
-          </div><div class="circle-clipper right">
-            <div class="circle"></div>
-          </div>
-        </div>
-
-        <div class="spinner-layer spinner-yellow">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div><div class="gap-patch">
-            <div class="circle"></div>
-          </div><div class="circle-clipper right">
-            <div class="circle"></div>
-          </div>
-        </div>
-
-        <div class="spinner-layer spinner-green">
-          <div class="circle-clipper left">
-            <div class="circle"></div>
-          </div><div class="gap-patch">
-            <div class="circle"></div>
-          </div><div class="circle-clipper right">
-            <div class="circle"></div>
-          </div>
-        </div>
-      </div>
+      <button type="button" name="button" id="rua">rua</button>
     </div>
 
     <script src="js/materialize.min.js"></script>
     <script type="text/javascript">
       window.addEventListener("onload", function(){alert("done");});
+      $("#rua").bind("click", function(){console.log("rua1");});
+      $("#rua").bind("click", function(){console.log("rua2");});
     </script>
     <!-- <script src="js/modulename.js"></script> -->
     <!-- <script src="js/framecallback.js"></script> -->

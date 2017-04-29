@@ -15,9 +15,15 @@
     <link rel="stylesheet" href="css/unselectable.css">
     <link rel="stylesheet" href="css/frameIn.css">
 
+    <!-- important library, should be loaded before body being loaded -->
     <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <script src="lang/zh-CN/string.js"></script>
     <script src="lang/lang.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/userstate.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/class/Frame.js"></script>
+    <script src="js/frame.js"></script>
 
     <title></title>
   </head>
@@ -31,7 +37,7 @@
         <a href="#!name"><span class="white-text name USER_NAME_GUEST"></span></a>
         <a href="#!email"><span class="white-text email BLANK"></span></a>
       </div></li>
-      <li><a href="#" class="waves-effect HOMEPAGE" onclick="showFrame('mainfn-frame');"></a></li>
+      <li><a href="#" class="waves-effect HOMEPAGE" onclick="Ml.frame['mainfn-frame'].showDefault();"></a></li>
       <li><div class="divider"></div></li>
       <li><a href="#" class="waves-effect ABOUT"></a></li>
       <li><a href="#" class="waves-effect EXIT"></a></li>
@@ -98,9 +104,6 @@
     </div>
 
     <script src="js/materialize.min.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/userstate.js"></script>
-    <script src="js/user.js"></script>
 
     <!-- <script src="js/cordova/buttonEvents.js"></script> -->
     <script src="js/disableHistory.js"></script>

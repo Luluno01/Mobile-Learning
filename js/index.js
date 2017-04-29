@@ -1,10 +1,21 @@
-// Initialize collapse button
-$(".button-collapse").sideNav();
-// Initialize collapsible (uncomment the line below if you use the dropdown variation)
-//$('.collapsible').collapsible();
+var fcnt;
+var indexFrameLoaded = false;
+
+$(document).ready(function()
+{
+  // Initialize collapse button
+  $(".button-collapse").sideNav();
+  // Initialize collapsible (uncomment the line below if you use the dropdown variation)
+  //$('.collapsible').collapsible();
+
+  fcnt = $("#frames").children().length;
+});
 
 document.title = TITLE.TITLE_LOGIN;
 $("#title-bar").html(TITLE.TITLE_LOGIN);
+
+// using namespace Ml;
+var Ml = {};
 
 var standby = 0;
 
@@ -14,13 +25,12 @@ frame_event.initEvent("framechange", false, false);
 var current_frame;
 
 var mainfn_frame =
-{}
-
-var fcnt = $("#frames").children().length;
+{};
 
 window.onload = function()
 {
   // toggleLoad();
+  indexFrameLoaded = true;
   console.log("Total frames: " + fcnt);
   showFrame(0);
   updateUserview();
@@ -36,6 +46,33 @@ function toggleLoad(desc, speed)
   else
   {
     $("#preloader").fadeOut(speed || 500);
+  }
+}
+
+function hideLoad(speed)
+{
+  if($("#preloader").is(":hidden"))
+  {
+    return false;
+  }
+  else
+  {
+    $("#preloader").fadeOut(speed || 500);
+    return true;
+  }
+}
+
+function showLoad(desc, speed)
+{
+  if($("#preloader").is(":hidden"))
+  {
+    $("#preloader > p").html(STRING.STRING1.LOADING_TIP_DEFAULT || desc);
+    $("#preloader").fadeIn(speed || 500);
+    return true;
+  }
+  else
+  {
+    return false;
   }
 }
 
@@ -132,6 +169,11 @@ function hideAllFrame()
 
 function setTitle(title)
 {
+  if(typeof current_frame == "undefined")
+  {
+    console.log("Error: Cannot set title at this time. (current_frame is undefined)");
+    return false;
+  }
   var _title = (current_frame != -1) ? (title || TITLE[window.frames[current_frame].document.title]) : "Rua";
   document.title = _title;
   $("#title-bar").html(_title);
