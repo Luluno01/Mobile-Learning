@@ -15,6 +15,7 @@ $(document).ready(function()
   // Ml.toast = (window.NativeInterface && NativeInterface.toast) || Materialize.toast;
   if(window.NativeInterface && NativeInterface.toast)
   {
+    // Java bridge method can't be invoked on a non-injected object
     Ml.toast = function(content)
     {
       NativeInterface.toast(content);
@@ -57,6 +58,10 @@ window.onload = function()
   console.log("Total frames: " + fcnt);
   showFrame(0);
   updateUserview();
+  if(window.NativeInterface)
+  {
+    NativeInterface.onAppLoaded();
+  }
 };
 
 function toggleLoad(desc, speed)
