@@ -68,7 +68,28 @@ window.onload = function()
   showFrame(0);
   updateUserview();
   $("#splash").fadeOut(500);
+  setTimeout(function()
+  {
+    $("#splash").remove();
+  }, 500);
 };
+
+function isSideNavOpened()
+{
+  return $("#sidenav-overlay").length == 1;
+}
+
+function toggleSideNav()
+{
+  if($("#slide-out").attr("style").indexOf("transform: translateX(0px);") != -1) // Side nav opened
+  {
+    $('.button-collapse').sideNav('hide');
+  }
+  else if(!isSideNavOpened())
+  {
+    $('.button-collapse').sideNav('show');
+  }
+}
 
 function toggleLoad(desc, speed)
 {
